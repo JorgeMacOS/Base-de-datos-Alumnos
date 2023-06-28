@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registro de Alumnos</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Registro de Alumnos</h1>
+    
+    <div id="alumno-form" class="form">
+      <h2>Alta de Alumno</h2>
+      <input type="text" id="nombre-input" placeholder="Nombre">
+      <input type="text" id="apellidos-input" placeholder="Apellidos">
+      <input type="number" id="edad-input" placeholder="Edad">
+      <button onclick="altaAlumno()">Dar de alta</button>
+    </div>
+
+    <div id="materias-form" class="form">
+      <h2>Inscribir a Materias</h2>
+      <select id="materias-select">
+        <option value="matematicas">Matemáticas</option>
+        <option value="historia">Historia</option>
+        <option value="ciencias">Ciencias</option>
+        <option value="ingles">Inglés</option>
+      </select>
+      <button onclick="inscribirMateria()">Inscribir</button>
+    </div>
+
+    <div id="calificaciones-form" class="form">
+      <h2>Asignar Calificaciones</h2>
+      <select id="alumnos-select" onchange="mostrarCalificaciones()">
+      </select>
+      <input type="number" id="calificacion-input" placeholder="Calificación">
+      <button onclick="asignarCalificacion()">Asignar</button>
+    </div>
+
+    <div id="grupos-form" class="form">
+      <h2>Crear Grupo</h2>
+      <input type="text" id="grupo-input" placeholder="Nombre del Grupo">
+      <button onclick="crearGrupo()">Crear</button>
+    </div>
+
+    <div id="busqueda-form" class="form">
+      <h2>Buscar Alumnos</h2>
+      <input type="text" id="busqueda-input" placeholder="Buscar por nombre o apellido">
+      <button onclick="buscarAlumnos()">Buscar</button>
+    </div>
+
+    <div id="promedio-alumno-form" class="form">
+      <h2>Promedio de Alumno</h2>
+      <select id="alumnos-promedio-select">
+      </select>
+      <button onclick="obtenerPromedioAlumno()">Calcular</button>
+    </div>
+
+    <div id="promedio-grupo-form" class="form">
+      <h2>Promedio del Grupo</h2>
+      <button onclick="obtenerPromedioGrupo()">Calcular</button>
+    </div>
+
+    <div id="lista-alumnos-form" class="form">
+      <h2>Lista de Alumnos</h2>
+      <button onclick="ordenarAlumnosAscendente()">Orden Ascendente</button>
+      <button onclick="ordenarAlumnosDescendente()">Orden Descendente</button>
+    </div>
+
+    <div id="resultado"></div>
+  </div>
+
+  <script src="alum.js"></script>
+</body>
+</html>
